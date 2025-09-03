@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Huertos Verticales</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <nav><a href="index.html" class="logo">HuertosVerticales🌿</a></nav>
+  </header>
+
+  <main>
+    <h2>Contacto</h2>
+    <form id="contactForm" novalidate>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required maxlength="100" />
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required maxlength="100" />
+
+      <div id="errores" class="errores"></div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const errores = [];
+      const regexEmail = /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
+
+      if (!nombre) {
+        errores.push("El nombre es obligatorio.");
+      } else if (nombre.length > 100) {
+        errores.push("El nombre no puede superar los 100 caracteres.");
+      }
+
+      if (!email) {
+        errores.push("El correo es obligatorio.");
+      } else if (email.length > 100) {
+        errores.push("El correo no puede superar los 100 caracteres.");
+      } else if (!regexEmail.test(email)) {
+        errores.push("El correo debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com");
+      }
+
+      const erroresDiv = document.getElementById('errores');
+      erroresDiv.innerHTML = '';
+      if (errores.length > 0) {
+        errores.forEach(err => {
+          const p = document.createElement('p');
+          p.textContent = err;
+          erroresDiv.appendChild(p);
+        });
+      } else {
+        alert('Formulario enviado correctamente');
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>
