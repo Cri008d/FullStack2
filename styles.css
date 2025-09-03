@@ -6,3 +6,24 @@
     text-align: center;
     
 }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+
+.caja{
+    margin: 50rex;
+    text-decoration: rgb(23, 1, 1);
+    background-color: aliceblue;
+    width: 225px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.imagen1{
+    width: 225px;
+    height: 225px;
+}
+
