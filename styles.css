@@ -56,3 +56,10 @@
     width: 200px;
     height: 200px;
 }
+
+.contenedor {
+      display: flex;          
+      gap: 10px;             
+      justify-content: start; 
+}
+
