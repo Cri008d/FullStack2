@@ -1,0 +1,33 @@
+.cuerpo{
+    background-color: rgb(105, 137, 90);
+}
+
+.navbar {
+    border: 2px solid black;
+}
+
+.caja{
+    margin-top: 30px;
+    width: 60% ; 
+    height: 550px ;         
+    margin: 50px auto;        
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-right: 35%;
+}
+
+.cajita{
+    margin-top: 30px;
+    width : 90% ; 
+    height: 150px ;         
+    margin: 50px auto;        
+    background: #f2f2f2;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.btn.btn-outline-dark{
+    margin-left: 15px;
+}

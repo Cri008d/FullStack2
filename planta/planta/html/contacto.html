@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Huertos Verticales</title>
+  <link rel="stylesheet" href="../assets/css/Contacto.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="cuerpo2">
+  <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Verde en Casa🌿</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link active" href="../html/contacto.html">Contacto</a>
+                        <a class="nav-link active" href="../html/producto.html">Productos</a>
+                    </div>
+                    <div class="d-flex align-items-center ms-auto">
+                        <a class="btn btn-outline-success" href="../html/Carrito.html">Carrito (<span id="carrito-count">0</span>)</a>
+                        <a class="btn btn-outline-dark" href="../html/login.html">Login</a>
+                        <a class="btn btn-outline-dark" href="../html/register.html">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <div class="caja-C">
+    <h2 class="text-center">Contacto</h2>
+    <form>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="nombre" class="form-control" id="nombre" aria-describedby="nombreHelp" required maxlength="100">
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo:</label>
+            <input type="correo" class="form-control" id="correo">
+        </div>
+        <div class="mb-3">
+            <label for="Mensaje" class="form-label">Mensaje:</label>
+            <input type="Mensaje" class="form-control" id="Mensaje">
+        </div>
+            <button type="submit" class="btn btn-primary" onclick="EnviarContacto()">Enviar</button>
+      </form>
+  </div>
+</body>
+<script src="../assets/js/contacto.js"></script>
+<script src="../assets/js/carrito.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</html>

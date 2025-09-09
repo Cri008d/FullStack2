@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/Login.css">
+</head>
+<body class="cuerpo-l">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Verde en Casa🌿</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link active" href="../html/contacto.html">Contacto</a>
+                        <a class="nav-link active" href="../html/producto.html">Productos</a>
+                    </div>
+                    <div class="d-flex align-items-center ms-auto">
+                        <a class="btn btn-outline-success" href="../html/Carrito.html">Carrito (<span id="carrito-count">0</span>)</a>
+                        <a class="btn btn-outline-dark" href="../html/login.html">Login</a>
+                        <a class="btn btn-outline-dark" href="../html/register.html">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="caja-sesion align-items-center">
+    <p class="text-center">Iniciar sesion</p>
+      <form  >
+        <div class="mb-3">
+          <label for="Nombre Completo" class="form-label">Nombre Completo:</label>
+          <input type="Name" class="form-control" id="Name" aria-describedby="nameHelp" required maxlength="100">
+        </div>
+        
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo:</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required maxlength="100">
+        </div>
+        
+        <div class="mb-3">
+          <label for="contraseña" class="form-label">Contraseña:</label>
+          <input type="password" class="form-control" id="password" required minlength="4" >
+        </div>
+
+        <div class="mb-3">
+          <label for="Confirmar contraseña" class="form-label">Confirmar contraseña:</label>
+          <input type="password" class="form-control" id="password" required minlength="4">
+        </div>
+          
+        <button type="submit" class="btn btn-primary" onclick="ValidarRegister()"> Registrarse</button>
+      </form>
+  </div>
+
+  
+
+
+</body>
+
+<script src="../assets/js/validacion.js"></script>
+<script src="../assets/js/carrito.js"></script>
+</html>

@@ -1,0 +1,23 @@
+.cuerpo2{
+    background-color: rgb(105, 137, 90);
+}
+
+.navbar {
+    border: 2px solid black;
+}
+
+.caja-C{ 
+    margin-top: 30px;
+    width: 30% ;
+    height: 40% auto;
+    margin: 80px auto;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+    
+.btn.btn-outline-dark{
+    margin-left: 15px;
+}
+
