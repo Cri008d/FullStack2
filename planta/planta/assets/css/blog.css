@@ -1,23 +1,5 @@
-.cuerpo{
-    background-color:   rgb(105, 137, 90);
+.cuerpo {
+    background-color: rgb(176, 212, 176);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.bloque {
-  display: flex;
-  width: 70% ; 
-  flex-wrap: wrap; 
-  gap: 20px; 
-  margin-left: 200px;
-  border: 2px solid black;
-  margin: 10px auto;
-}
-
-.caja{
-    margin-top: 30px;
-    width : 90% ; 
-    height: 150px ;         
-    margin: 50px auto;        
-    background: #f2f2f2;
-    padding: 20px;
-    border: 1px solid black;
-}
