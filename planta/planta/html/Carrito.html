@@ -30,12 +30,52 @@
             </div>
         </nav>
     </header>
-    <p class="fs-3 text-center">Carrito de compras</p>
-    <div class="caja ">
-        <div class="cajita">
 
+    <main class="container mt-5">
+        <h1 class="text-center">🛒 Carrito de compras</h1>
+        <p class="text-center">Productos agregados: <span id="carrito-count">0</span></p>
+
+        <ul id="lista-productos" class="list-group mt-4 mb-3">
+      <!-- Aquí se cargarán los productos desde localStorage -->
+        </ul>
+
+        <div class="text-center">
+            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
         </div>
-    </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carritoCount = document.getElementById("carrito-count");
+            const lista = document.getElementById("lista-productos");
+
+            // Mostrar contador
+            const contador = parseInt(localStorage.getItem("carritoCount")) || 0;
+            carritoCount.textContent = contador;
+
+            // Mostrar productos
+            const productos = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+
+            if (productos.length === 0) {
+                const li = document.createElement("li");
+                li.classList.add("list-group-item", "text-muted", "text-center");
+                li.textContent = "Tu carrito está vacío.";
+                lista.appendChild(li);
+            } else {
+                productos.forEach(producto => {
+                    const li = document.createElement("li");
+                    li.classList.add("list-group-item");
+                    li.textContent = producto;
+                    lista.appendChild(li);
+                });
+            }
+        });
+
+        function vaciarCarrito() {
+            localStorage.removeItem("carritoCount");
+            localStorage.removeItem("productosCarrito");
+            location.reload(); // Recargar para actualizar la vista
+            }
+    </script>    
 </body>
-<script src="../assets/js/carrito.js"></script>
 </html>
