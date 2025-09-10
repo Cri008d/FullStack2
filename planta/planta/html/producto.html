@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../assets/css/productos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-
 <body class="cuerpo">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,7 +20,7 @@
                         <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                         <a class="nav-link active" href="../html/contacto.html">Contacto</a>
                         <a class="nav-link active" href="../html/producto.html">Productos</a>
-                        <a class="nav-link active" href="../html/blog.html">Blog</a>
+                        <a class="nav-link active" href="../html/blog.html">blog</a>
                     </div>
                     <div class="d-flex align-items-center ms-auto">
                         <a class="btn btn-outline-success" href="../html/Carrito.html">Carrito (<span id="carrito-count">0</span>)</a>
@@ -32,37 +31,34 @@
             </div>
         </nav>
     </header>
-
-    <main class="contenedor mt-5">
-        <div class="bloque">
-            <img class="img-ver align-items-center ms-auto" src="../assets/img/verduras.jpg" alt="ver">
-        </div>
-
-        <div class="contenedor">    
-            <div class="caja">
-                <img class="imagen1" src="../assets/img/lechuga-rom.jpg" alt="Lechuga romana">
-                <p>Lechuga romana</p>
-                <button class="btn btn-secondary agregar-carrito">Agregar</button>
-                <a href="./ProdDetalles.html" class="btn btn-outline-success">Detalles</a>
-            </div>
-            <div class="caja">
-                <img class="imagen2" src="../assets/img/Tomate.jpg" alt="Tomate">
-                <p>Tomate</p>
-                <button class="btn btn-secondary agregar-carrito">Agregar</button>
-                <a href="./ProdDetalles.html" class="btn btn-outline-success">Detalles</a>
-               
-            </div>
-            <div class="caja">
-                <img class="imagen3" src="../assets/img/zanahoria.jpg" alt="Zanahoria">
-                <p>Zanahoria</p>
-                <button class="btn btn-secondary agregar-carrito" >Agregar</button>
-                <a href="./ProdDetalles.html" class="btn btn-outline-success">Detalles</a>
-                
-            </div>
     
-        </div>
-    </main>
+    <div class="bloque">
+        <!-- Para las imagenes pongan cualquiera y prueben si les funciona -->
+        <img class="img-ver align-items-center ms-auto" src="../assets/img/verduras.jpg" alt="ver">
+    </div>
+   <div class="contenedor">    
+        <div class="caja">
+            <img class="imagen1" src="../assets/img/lechuga-rom.jpg" alt="img1">
+            <p>Lechuga romana</p>
+            <button type="button" class="btn btn-secondary" onclick="agregarAlCarrito('Lechuga romana', '../assets/img/lechuga-rom.jpg')">Agregar</button>
+            <button type="button" class="btn btn-secondary" onclick="verDetalles('Lechuga romana', '../assets/img/lechuga-rom.jpg')">Detalles</button>
 
-    <script src="../assets/js/carrito.js"></script>
+        </div>
+        <div class="caja">
+            <img class="imagen2" src="../assets/img/Tomate.jpg" alt="img2">
+            <p>Tomate</p>
+            <button type="button" class="btn btn-secondary" onclick="agregarAlCarrito('Tomate', '../assets/img/Tomate.jpg')">Agregar</button>
+            <button type="button" class="btn btn-secondary" onclick="verDetalles('Tomate', '../assets/img/Tomate.jpg')">Detalles</button>
+
+        </div>
+        <div class="caja">
+            <img class="imagen2" src="../assets/img/zanahoria.jpg" alt="img2">
+            <p>Zanahoria    </p>
+            <button type="button" class="btn btn-secondary" onclick="agregarAlCarrito('Zanahoria', '../assets/img/zanahoria.jpg')">Agregar</button>
+            <button type="button" class="btn btn-secondary" onclick="verDetalles('Zanahoria', '../assets/img/zanahoria.jpg')">Detalles</button>
+        </div>
+    
+    </div>
 </body>
+<script src="../assets/js/carrito.js"></script>
 </html>
